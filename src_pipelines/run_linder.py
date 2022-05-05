@@ -119,7 +119,7 @@ def run_clf(base_dir):
     print(clf_name, train_score, test_score, params)
     return clf_name, train_score, test_score, params
 
-import traceback
+
 def run_prediction(base_dir, dat_fn):
     wfn = os.path.join(base_dir, PIPELINE_NAME, 'dat', 'vectorizer.pkl')
     with open(wfn, 'rb') as f:

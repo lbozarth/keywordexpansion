@@ -1,10 +1,7 @@
 import os
+
 import pandas as pd
 
-pd.set_option('display.max_rows', 500000)
-pd.set_option('display.max_columns', 50000)
-pd.set_option('display.width', 10000)
-pd.set_option('max_colwidth', None)
 
 def basic_tokenize(x):
     return x # do nothing; already a list

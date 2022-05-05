@@ -1,13 +1,9 @@
 import os
-import socket
-import sys
 
 import pandas as pd
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 # Disable warning
-from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
-from sklearn.utils import shuffle
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
 from tensorflow.python.client import device_lib
@@ -77,7 +73,8 @@ def gen_model(base_dir, model_name):
     return model
 
 import traceback
-import random
+
+
 def run_prediction(base_dir, model_name, dat_file):
     # import tensorflow as tf
     from transformers import DistilBertTokenizerFast, TFDistilBertForSequenceClassification
@@ -119,7 +116,7 @@ def gen_keywords(df):
     features = run_linder.get_keywords(df)
     return features
 
-import time
+
 def get_available_gpus():
     local_device_protos = device_lib.list_local_devices()
     names = [x.name for x in local_device_protos if x.device_type == 'GPU']

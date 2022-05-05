@@ -14,7 +14,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
-from src_pipelines import  run_king_clfs_features
+from src_pipelines import run_king_clfs_features
 
 #(naı̈ve Bayes, k-nearest neighbor(k = 5), logistic regression, support vector machine, decision tree, and random forests)
 CLF_NAMES_ALL = ['RandomForest', 'NaiveBayes', 'SVC', 'MLP', 'LogisticRegression', 'DecisionTree', 'SGD'] #'NearestNeighbors'

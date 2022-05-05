@@ -1,9 +1,5 @@
 import traceback
 
-import pandas as pd
-import socket, sys
-import os
-
 PIPELINE_NAME = 'tfidf'
 
 from src_pipelines import run0_shared
