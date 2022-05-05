@@ -56,7 +56,7 @@ def extract_keywords_row(row, vectorizer):
 
 def gen_keywords(df):
     stopwords = run0_shared.get_stopwords()
-    vectorizer = basic_vec_idf(df[['id_str']], df['joined_text'].tolist(), min_df=0.1, max_features=300, stopwords=stopwords)
+    vectorizer = basic_vec_idf(df[['id_str']], df['joined_text'].tolist(), max_features=300, stopwords=stopwords)
 
     df['keywords'] = df.apply(extract_keywords_row, args=(vectorizer, ), axis=1)
     df = df.explode('keywords')

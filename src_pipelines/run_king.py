@@ -1,8 +1,6 @@
 import warnings
 
-import mpi4py
 # Disable warning
-from mpi4py.futures import MPIPoolExecutor
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
